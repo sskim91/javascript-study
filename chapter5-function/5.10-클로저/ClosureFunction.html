@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function test(name) {
+        var output = "Hello " + name;
+        return function () {
+            alert(output);
+        }
+    }
+
+    test("sskim")();
+</script>
+
+<script>
+    function test(name) {
+        var output = "Hello " + name;
+        return function () {
+            alert(output);
+        };
+    }
+
+    var test_1 = test("sskim");
+    var test_2 = test("sskim91");
+
+    test_1();
+    test_2();
+</script>
+</body>
+</html>
