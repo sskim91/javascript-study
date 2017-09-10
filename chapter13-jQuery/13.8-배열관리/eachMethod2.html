@@ -3,11 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .high-light-0 {  background: yellow;  }
+        .high-light-1 {  background: orange;  }
+        .high-light-2 {  background: blue;  }
+        .high-light-3 {  background: green;  }
+        .high-light-4 {  background: red;  }
+    </style>
 </head>
 <body>
 <script src="../jquery-3.2.1.js"></script>
 <script>
+    $(document).ready(function () {
+        $("h1").addClass('high-light');
 
+        $("h1").each(function (index, item) {
+            //$(item).addClass('high-light-' + index);
+            $(this).addClass('high-light-' + index);
+        });
+    });
 </script>
+
+<h1>item - 0</h1>
+<h1>item - 1</h1>
+<h1>item - 2</h1>
+<h1>item - 3</h1>
+<h1>item - 4</h1>
 </body>
 </html>
