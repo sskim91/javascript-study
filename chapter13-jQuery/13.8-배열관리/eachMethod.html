@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="../jquery-3.2.1.js"></script>
+<script>
+    $(document).ready(function () {
+        var array = [
+            {name : "sskim", link : "www.sskim.com"},
+            {name : "google", link : "www.google.com"},
+            {name : "naver", link : "www.naver.com"}
+        ];
+
+        $.each(array, function (index, item) {
+
+            var output = "";
+
+            output += '<a href="' + item.link + '">';
+            output += ' <h1>' + item.name + '</h1>';
+            output += '</a>';
+
+            document.body.innerHTML += (output);
+        });
+    });
+</script>
+</body>
+</html>
