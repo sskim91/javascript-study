@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var object = {
+        name: "sskim",
+        gender: "male"
+    };
+
+    alert(JSON.stringify(object));
+</script>
+<script>
+    var object = {
+        name: "sskim",
+        gender: "male"
+    };
+
+    var copy = JSON.parse(JSON.stringify(object));
+    alert(copy.name + " : " + copy.gender);
+</script>
+</body>
+</html>
