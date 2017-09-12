@@ -9,7 +9,7 @@ ECMAScript5 JSON 객체의 메서드
 | JSON.stringify() | 자바스크립트 객체를 JSON 문자열로 변환 |
 | JSON.parse()  | JSON 문자열을 자바스크립트 객체로 변환 |
 
-자바스크립트 객체를 JSON 문자열로 변환
+자바스크립트 객체를 JSON 문자열로 변환  
 JSON.stringify() 예제
 ```javascript
 var object = {
@@ -20,7 +20,7 @@ var object = {
 alert(JSON.stringify(object));
 ```
 
-JSON 문자열을 자바스크립트 객체로 바꾸는 역할
+JSON 문자열을 자바스크립트 객체로 바꾸는 역할  
 JSON.parse() 예제
 ```javascript
 var object = {
