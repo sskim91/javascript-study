@@ -80,4 +80,42 @@ hover() 메서드
 $(selector).hover(function(event){}, function(event){});
 ```
 
-보통 hover() 메서드를 이용해서 메뉴의 드롭바를 구현한다.
+보통 hover() 메서드를 이용해서 메뉴의 드롭바를 구현한다.  
+
+
+## 16.4 이벤트 연결 제거
+
+이벤트를 제거할 때는 off() 메서드를 사용한다.
+
+| 메서드 이름 |  설명   |
+| :------------- | :------------- |
+| off()    | 이벤트를 제거       |
+
+```javascript
+1. $(selector).off()
+2. $(selector).off(eventName)
+3. $(selector).off(eventName, function)
+```
+
+1번 형태는 해당 문서 객체와 관련된 모든 이벤트를 제거.
+2번 형태는 해당 문서 객체의 특정 이벤트와 관련된 모든 이벤트를 제거.
+3번 형태는 특정 이벤트 리스너를 제거
+
+예제
+```javascript
+ $(document).ready(function(){
+   //이벤트 연결
+   $("h1").click(function(){
+     $(this).html("click");
+
+     //이벤트 제거
+     $(this).off()
+   })
+ });
+```
+
+jQuery의 one() 메서드는 이벤트를 한번만 연결해주는 기능이 있다.
+
+| 메서드 이름 | 설명 |
+| :------------- | :------------- |
+| one() | 이벤트를 한 번만 연결 |
