@@ -52,3 +52,32 @@ $(document).ready(function(){
     });
 });
 ```
+위의 코드는 마우스가 진입하면 reverse 클래스 속성을 추가하고, 마우스가 빠져나가면 reverse 클래스 속성을 제거한다.
+
+## 16.3 간단한 이벤트 연결
+
+간단한 방식으로 연결할 수 있는 이벤트 표
+<pre>
+blur      |   focus       |   focusin   |   focusout  |   load
+resise    |   scroll      |   unload    |   click     |   dblclick
+mousedown |   mouseup     |   mousemove |   mouseover |   mouseout
+mouseenter|   mouseleave  |   change    |   select    |   submit
+keydown   |   keypress    |   keyup     |   error     |   ready
+</pre>
+
+간단한 방식으로 이벤트를 연결할 때는 아래와 같은 방법을 사용한다.
+```javascript
+$(selector).method(function(event){});
+```
+
+이벤트 연결 메서드
+hover() 메서드
+| 메서드 이름 | 설명 |
+| :------------- | :------------- |
+| hover() | mouseenter 이벤트와 mouseleave 이벤트를 동시에 연결한다. |
+
+```javascript
+$(selector).hover(function(event){}, function(event){});
+```
+
+보통 hover() 메서드를 이용해서 메뉴의 드롭바를 구현한다.
