@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    var intervalId = setInterval(function () {
+        alert("hi");
+    },1000);
+
+    setTimeout(function () {
+        //타이머를 종료
+        clearInterval(intervalId);
+    }, 3000);
+</script>
+</body>
+</html>
