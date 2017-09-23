@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src='http://code.jquery.com/jquery-latest.min.js'></script>
+</head>
+<body>
+
+    <canvas id="canvas" width="700" height="400" style="border: 3px solid black">
+
+    </canvas>
+    <script>
+        $(document).ready(function () {
+            var canvas = document.getElementById("canvas");
+
+            var context = canvas.getContext("2d");
+
+            $(canvas).on({
+                mousedown: function (event) {
+                    //위치를 얻어낸다.
+                    var position = $(this).offset();
+                    var x = event.pageX - position.left;
+                    var y = event.pageY - position.top;
+
+                    //선을 그린다.
+                    context.beginPath();
+                    context.moveTo(x, y);
+                },
+                mouseup: function (event) {
+                    //위치를 얻어낸다.
+                    var position = $(this).offset();
+                    var x = event.pageX - position.left;
+                    var y = event.pageY - position.top;
+
+                    //선을 그린다.
+                    context.lineTo(x, y);
+                    context.stroke();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
