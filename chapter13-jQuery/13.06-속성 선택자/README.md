@@ -16,3 +16,20 @@
 ```diff
 +속성 선택자는 입력 양식과 관련된 태그를 선택할 때 많이 사용한다.
 ```
+예제
+
+```javascript
+<body>
+
+<input type="text">
+<input type="password">
+<input type="radio">
+<input type="checkbox">
+<input type="file">
+<script>
+	$(document).ready(function(){
+        $("input[type=text]").val("hello jquery");
+	});
+</script>
+</body>
+```

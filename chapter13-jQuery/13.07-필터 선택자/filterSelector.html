@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<select name="" id="">
+	<option value="a">a</option>
+	<option value="b">b</option>
+	<option value="c">c</option>
+	<option value="d">d</option>
+	<option value="e">e</option>
+</select>
+<script>
+	$(document).ready(function(){
+	   //3초 후에 코드를 실행
+        setTimeout(function () {
+            var value = $("select > option:selected").val();
+
+            alert(value);
+        }, 3000);
+	});
+</script>
+</body>
+</html>
